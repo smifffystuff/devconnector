@@ -26,4 +26,8 @@ RUN npm install --prefix client
 
 RUN npm run docker-postbuild 
 
+EXPOSE 3000
+
+CMD [ "npm start" ]
+
 
