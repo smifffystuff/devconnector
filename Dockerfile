@@ -26,8 +26,10 @@ RUN npm install --prefix client
 
 RUN npm run docker-postbuild 
 
+RUN chmod 777 /var/www/devconnector/scripts/start.sh
+
 EXPOSE 3000
 
-CMD [ "npm start" ]
+CMD [ "/var/www/devconnector/scripts/start.sh" ]
 
 
